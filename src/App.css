@@ -425,10 +425,6 @@ header.sticky {
   transform: translateY(-50%);
 }
 
-.country-box .custom-select {
-  background: none;
-}
-
 .country-box .bootstrap-select .dropdown-toggle .filter-option {
   display: -webkit-box;
   display: -ms-flexbox;

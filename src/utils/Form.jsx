@@ -22,17 +22,19 @@ const Form = () => {
               Target={(p) => (
                 <div {...p} className="input-group-append country-input-group">
                   {" "}
-                  <span className="input-group-text custom-select form-select p-0">
-                    <span className="px-2 py-1 d-block w-100 h-100">
-                      <span className="text-secondary d-flex h-100 w-100 align-items-center">
-                        <span
-                          className={`currency-flag ${currency.flag} me-1`}
-                        />{" "}
-                        &nbsp;
-                        {currency.short}
+                  <div className="w-100">
+                    <span className="input-group-text custom-select form-select p-0">
+                      <span className="px-2 py-1 d-block w-100 h-100">
+                        <span className="text-secondary d-flex h-100 w-100 align-items-center">
+                          <span
+                            className={`currency-flag ${currency.flag} me-1`}
+                          />{" "}
+                          &nbsp;
+                          {currency.short}
+                        </span>
                       </span>
                     </span>
-                  </span>
+                  </div>
                 </div>
               )}
               options={currencies}
