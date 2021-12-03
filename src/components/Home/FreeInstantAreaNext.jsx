@@ -60,7 +60,7 @@ const FreeInstantAreaNext = () => {
                   </p>
                 </div>
               </div>
-              <a data-aos="fade-left" className="checkout-btn" href="#">
+              <a data-aos="fade-left" className="checkout-btn" href="/">
                 Checkout Profile
               </a>
             </div>

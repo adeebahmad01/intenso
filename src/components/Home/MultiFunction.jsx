@@ -32,7 +32,7 @@ const MultiFunction = () => {
               <a
                 data-aos="fade-right"
                 className="account-btn compare-btn"
-                href="#"
+                href="/"
               >
                 Compare Plan
               </a>
@@ -45,7 +45,7 @@ const MultiFunction = () => {
                   data-aos="fade-left"
                   className="multifunction-content position-relative"
                 >
-                  <img src={M1} alt />
+                  <img src={M1} alt="pic--" />
                   <h4>Transparence</h4>
                   <p>
                     No hidden fees, no transfer commissions. We offer safe
@@ -55,7 +55,7 @@ const MultiFunction = () => {
               </div>
               <div className="col-sm-6">
                 <div data-aos="fade-left" className="multifunction-content">
-                  <img src={M2} alt />
+                  <img src={M2} alt="pic--" />
                   <h4>Safe</h4>
                   <p>
                     Your funds are safeguarded
@@ -70,7 +70,7 @@ const MultiFunction = () => {
               </div>
               <div className="col-sm-6">
                 <div data-aos="fade-left" className="multifunction-content">
-                  <img src={M3} alt />
+                  <img src={M3} alt="pic--" />
                   <h4>Available</h4>
                   <p>
                     Create account for the <br />
@@ -85,7 +85,7 @@ const MultiFunction = () => {
                   data-aos="fade-left"
                   className="multifunction-content active"
                 >
-                  <img src={M4} alt />
+                  <img src={M4} alt="pic--" />
                   <h4>Reliable</h4>
                   <p>
                     Cash back in every 10

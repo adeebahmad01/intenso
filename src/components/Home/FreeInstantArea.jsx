@@ -21,25 +21,25 @@ const FreeInstantArea = () => {
               <div className="row">
                 <div className="col-md-3 col-sm-4 col-6">
                   <div className="free-box free-color-one text-center">
-                    <img src={freeIcon1} alt />
+                    <img src={freeIcon1} alt="pic--" />
                     <h3>Cash pick up</h3>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-4 col-6">
                   <div className="free-box free-color-two text-center">
-                    <img src={freeIcon2} alt />
+                    <img src={freeIcon2} alt="pic--" />
                     <h3>Mobile payment</h3>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-4 col-6">
                   <div className="free-box free-color-two text-center">
-                    <img src={freeIcon3} alt />
+                    <img src={freeIcon3} alt="pic--" />
                     <h3>Bank transfers</h3>
                   </div>
                 </div>
                 <div className="col-md-3 col-sm-4 col-6">
                   <div className="free-box free-color-two text-center">
-                    <img src={freeIcon4} alt />
+                    <img src={freeIcon4} alt="pic--" />
                     <h3>Airtime</h3>
                   </div>
                 </div>

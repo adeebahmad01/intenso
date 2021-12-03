@@ -25,7 +25,7 @@ const Transfters = () => {
                   <br />
                   Join over 1 millions users who trust us.
                 </p>
-                <a href="#" className="account-btn">
+                <a href="/" className="account-btn">
                   Create account
                 </a>
               </div>

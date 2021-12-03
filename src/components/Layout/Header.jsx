@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import useEventListener from "../../hooks/useEventListener";
+import Logo from "../../assets/images/logo.svg";
 
 const Header = () => {
   const ref = useRef();
@@ -19,7 +20,7 @@ const Header = () => {
             {/*logo start*/}
             <div className="logo">
               <a href="index.html">
-                <img src="img/logo.png" alt />
+                <img src={Logo} alt="Logo" />
               </a>
             </div>
             {/*logo end*/}
@@ -28,32 +29,32 @@ const Header = () => {
             {/*menu start*/}
             <ul id="menu" className={open ? "open" : ""}>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <a href="/" className="nav-link">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link menu_link">
+                <a href="/" className="nav-link menu_link">
                   How’s work
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link menu_link">
+                <a href="/" className="nav-link menu_link">
                   Track my order
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link menu_link">
+                <a href="/" className="nav-link menu_link">
                   About us
                 </a>
               </li>
             </ul>
             {/*menu end*/}
             <div className="d-flex align-items-center custom-btn-none">
-              <a href="#" className="make-btn">
+              <a href="/" className="make-btn">
                 Log in
               </a>
-              <a href="#" className="make-btn create-btn">
+              <a href="/" className="make-btn create-btn">
                 Create Account
               </a>
             </div>

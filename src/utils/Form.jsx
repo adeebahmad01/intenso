@@ -128,12 +128,12 @@ const Form = () => {
           </div>
         </div>
         <p className="exchange-text">
-          <img className="mr_5" src={alarmIcon} alt />
+          <img className="mr_5" src={alarmIcon} alt="pic--" />
           Exchange rate : 1 SEK{" "}
-          <img className="mr_5 ml_5" src={errorIcon} alt /> 0,121 SEK
+          <img className="mr_5 ml_5" src={errorIcon} alt="pic--" /> 0,121 SEK
         </p>
         <p className="exchange-text mt_15">
-          <img className="mr_5" src={feesIcon} alt />
+          <img className="mr_5" src={feesIcon} alt="pic--" />
           Exchange rate : 1 SEK
         </p>
         <div className="total-text mt_20 d-flex align-items-center justify-content-between">

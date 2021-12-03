@@ -16,7 +16,7 @@ const ReadyAdventure = () => {
               data-aos="fade-left"
               className="img-fluid"
               src={readyImg}
-              alt
+              alt="pic--"
             />
           </div>
           <div className="col-lg-7 order-lg-1">
@@ -31,11 +31,11 @@ const ReadyAdventure = () => {
                 data-aos="fade-right"
                 className="social-play d-flex align-items-center"
               >
-                <a href="#">
-                  <img src={googleIcon} alt />
+                <a href="/">
+                  <img src={googleIcon} alt="pic--" />
                 </a>
-                <a className="app-icon" href="#">
-                  <img src={appIcon} alt />
+                <a className="app-icon" href="/">
+                  <img src={appIcon} alt="pic--" />
                 </a>
               </div>
             </div>

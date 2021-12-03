@@ -12,7 +12,7 @@ const WorkArea = () => {
                 data-aos="fade-right"
                 className="img-fluid"
                 src={howImg}
-                alt
+                alt="how-img"
               />
             </div>
             <div className="col-lg-6">
@@ -28,7 +28,7 @@ const WorkArea = () => {
               mt_35
             "
                 >
-                  <img className="line-one" src={LineOne} alt />
+                  <img className="line-one" src={LineOne} alt="pic--" />
                   <div className="d-flex align-items-start custom-flex">
                     <div className="how-number-text">
                       <span className="number-box" />
@@ -92,7 +92,7 @@ const WorkArea = () => {
               position-relative
             "
                 >
-                  <img className="line-two" src={LineOne} alt />
+                  <img className="line-two" src={LineOne} alt="pic--" />
                   <div className="d-flex align-items-start custom-flex">
                     <div className="how-number-text">
                       <span className="number-box" />

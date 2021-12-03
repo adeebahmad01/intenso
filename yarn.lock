@@ -9271,7 +9271,7 @@ react-dev-utils@^11.0.3:
     browserslist "4.14.2"
     chalk "2.4.2"
     cross-spawn "7.0.3"
-    detect-port-alt "1.1.6"
+    detect-port-alt="pic--""1.1.6"
     escape-string-regexp "2.0.0"
     filesize "6.1.0"
     find-up "4.1.0"

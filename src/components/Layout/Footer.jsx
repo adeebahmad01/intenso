@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaPaperPlane,
 } from "react-icons/fa";
+import Logo from "../../assets/images/logo.svg";
 
 const Footer = () => {
   return (
@@ -16,24 +17,24 @@ const Footer = () => {
             <div className="row">
               <div className="col-sm-6">
                 <div className="mt_60">
-                  <a href="#">
-                    <img src="img/footer-logo.png" alt />
+                  <a href="/">
+                    <img src={Logo} alt="Logo" />
                   </a>
                   <p className="footer-para-one mt_40">
                     Copyright © 2021 Grabstar.
                   </p>
                   <p className="footer-para-one">All rights reserved</p>
                   <div className="social-icon">
-                    <a href="#">
+                    <a href="/">
                       <FaInstagram />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <FaTwitter />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <FaDribbble />
                     </a>
-                    <a href="#">
+                    <a href="/">
                       <FaYoutube />
                     </a>
                   </div>
@@ -44,13 +45,13 @@ const Footer = () => {
                   <h2 className="footer-head">Company</h2>
                   <ul className="mt_25">
                     <li className="mt_10">
-                      <a href="#">About us</a>
+                      <a href="/">About us</a>
                     </li>
                     <li className="mt_10">
-                      <a href="#">Blog</a>
+                      <a href="/">Blog</a>
                     </li>
                     <li className="mt_10">
-                      <a href="#">Contact us</a>
+                      <a href="/">Contact us</a>
                     </li>
                   </ul>
                 </div>
@@ -64,13 +65,13 @@ const Footer = () => {
                   <h2 className="footer-head">Support</h2>
                   <ul className="mt_25">
                     <li className="mt_10">
-                      <a href="#">Help center</a>
+                      <a href="/">Help center</a>
                     </li>
                     <li className="mt_10">
-                      <a href="#">Terms of service</a>
+                      <a href="/">Terms of service</a>
                     </li>
                     <li className="mt_10">
-                      <a href="#">Privacy policy</a>
+                      <a href="/">Privacy policy</a>
                     </li>
                   </ul>
                 </div>
