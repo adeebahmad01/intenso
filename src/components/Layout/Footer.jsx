@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaInstagram,
   FaTwitter,
@@ -8,8 +8,13 @@ import {
   FaAngleUp,
 } from "react-icons/fa";
 import Logo from "../../assets/images/logo.svg";
+import useEventListenser from "../../hooks/useEventListener";
 
 const Footer = () => {
+  const [show, setShow] = useState(false);
+  useEventListenser("scroll", () => {
+    setShow(window.scrollY > 600);
+  });
   return (
     <>
       <a
@@ -18,9 +23,17 @@ const Footer = () => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
+        style={{
+          visibility: show ? "visible" : "hidden",
+          opacity: show ? 1 : 0,
+          transition: "all 0.5s ease-in-out",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
         className="back-to-top"
       >
-        <FaAngleUp />
+        <FaAngleUp fill="#fff" />
       </a>
       <footer>
         <div className="container">
