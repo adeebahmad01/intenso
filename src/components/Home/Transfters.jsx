@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "../../assets/images/home-bg.png";
 import Form from "../../utils/Form";
 
@@ -25,9 +26,9 @@ const Transfters = () => {
                   <br />
                   Join over 1 millions users who trust us.
                 </p>
-                <a href="/" className="account-btn">
+                <Link to="/signup/country" className="account-btn">
                   Create account
-                </a>
+                </Link>
               </div>
               <div className="trust-box d-flex align-items-center justify-content-between">
                 <div>
