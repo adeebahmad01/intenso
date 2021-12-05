@@ -10,9 +10,9 @@ const Identity = () => {
           <h1 className="text-lg pb-2 font-weight-bold">
             Identity verifications
           </h1>
-          <h2 className="text-small">
+          <label className="text-caption text-muted font-weight-normal">
             Please check if all your details are correct
-          </h2>
+          </label>
         </div>
         <form action="/">
           <div className="container-fluid">
