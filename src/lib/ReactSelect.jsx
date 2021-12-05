@@ -83,6 +83,7 @@ function ReactSelect({
   type,
   Target,
   dropdownClassName,
+  field,
   ...props
 }) {
   const [open, setOpen] = useState(false);
@@ -125,11 +126,15 @@ function ReactSelect({
           options={options}
           getOptionLabel={(option) => (
             <>
-              <span className={`currency-flag ${option.flag} me-1`} />
-              <span className="text">
-                &nbsp;{option.short}&nbsp;
-                <small className="text-muted">{option.long}</small>
-              </span>
+              <span className={`currency-flag ${option.flag} mr-2`} />
+              {field ? (
+                <span className="text">&nbsp;{option[field]}</span>
+              ) : (
+                <span className="text">
+                  &nbsp;{option.short}&nbsp;
+                  <small className="text-muted">{option.long}</small>
+                </span>
+              )}
             </>
           )}
           placeholder="Search..."

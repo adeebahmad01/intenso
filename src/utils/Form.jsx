@@ -143,7 +143,7 @@ const Form = () => {
           <h3>4,38€</h3>
         </div>
         <div className="text-center">
-          <button type="button" className="send-btn mt_30">
+          <button type="button" className="send-btn w-100 mt_30">
             Send
           </button>
         </div>

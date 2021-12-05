@@ -49,7 +49,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 button:focus,
@@ -246,15 +246,7 @@ header.sticky {
 }
 
 .create-btn:hover {
-  background: -o-linear-gradient(bottom, #198a8a, #198a8a);
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#198a8a),
-    to(#198a8a)
-  );
-  background: linear-gradient(0deg, #198a8a, #198a8a);
+  background: #198a8a;
   color: #ffffff;
 }
 
@@ -524,21 +516,13 @@ header.sticky {
 }
 
 .send-btn {
-  background: -o-linear-gradient(bottom, #198a8a, #198a8a);
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#198a8a),
-    to(#198a8a)
-  );
-  background: linear-gradient(0deg, #198a8a, #198a8a);
+  background: #198a8a;
   border-radius: 5px;
   padding: 15px 150px;
   border: none;
   color: #ffffff;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   line-height: 22px;
   border: 2px solid transparent;
@@ -966,4 +950,87 @@ footer {
 
 .back-to-top i {
   color: #fff;
+}
+
+.text-lg {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.text-caption {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.text-small {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.ground_wrapper * {
+  font-family: "Montserrat", sans-serif;
+}
+
+label {
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+
+label,
+input,
+button,
+select,
+textarea,
+.custom-select * {
+  font-family: "Inter", sans-serif !important;
+}
+
+.custom-checkbox {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  appearance: none;
+  border: 2px solid #bcb3e2;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  margin-right: 10px;
+}
+
+.custom-checkbox:checked {
+  border: 2px solid #198a8a;
+  background: #198a8a;
+}
+
+.custom-checkbox:checked::before,
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #fff;
+}
+
+.custom-checkbox:checked::before {
+  width: 6px;
+  top: 9px;
+  left: 1px;
+  transform: rotate(44deg);
+}
+
+.custom-checkbox:checked::after {
+  width: 12px;
+  top: 7px;
+  left: 3px;
+  transform: rotate(-55deg);
+}
+
+.custom-checkbox:focus {
+  outline: none;
+}
+
+label {
+  color: #425466;
 }

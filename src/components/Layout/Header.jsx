@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import useEventListener from "../../hooks/useEventListener";
 import Logo from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const ref = useRef();
@@ -13,7 +14,7 @@ const Header = () => {
     }
   });
   return (
-    <header ref={ref}>
+    <header ref={ref} style={{ zIndex: 1001 }}>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-2 col-sm-4 col-4 text-left">
@@ -51,12 +52,12 @@ const Header = () => {
             </ul>
             {/*menu end*/}
             <div className="d-flex align-items-center custom-btn-none">
-              <a href="/" className="make-btn">
+              <Link to="/login" className="make-btn">
                 Log in
-              </a>
-              <a href="/" className="make-btn create-btn">
+              </Link>
+              <Link to="/signup/country" className="make-btn create-btn">
                 Create Account
-              </a>
+              </Link>
             </div>
             <div onClick={() => setOpen(!open)} className="hamburger-menu">
               <span className={`line-top${open ? " current" : ""}`} />
