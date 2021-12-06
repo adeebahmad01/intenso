@@ -1,11 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { LargeContainer } from "../../utils/FormContainers";
 import GroundWrapper from "../../utils/GroundWrapper";
+import Stepper from "../../utils/Stepper";
 
 const Identity = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("../documents");
+  };
   return (
     <GroundWrapper>
-      <LargeContainer className="my-5">
+      <Stepper active={2} className="mt-5 pt-5" />
+      <LargeContainer className="mb-5 mt-3">
         <div className="headings text-center mb-4">
           <h1 className="text-lg pb-2 font-weight-bold">
             Identity verifications
@@ -14,7 +22,7 @@ const Identity = () => {
             Please check if all your details are correct
           </label>
         </div>
-        <form action="/">
+        <form onSubmit={handleSubmit} action="/">
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-6">

@@ -10,7 +10,7 @@ const Form = () => {
   const [receivingCurr, setreceivingCurr] = useState(currencies[0].options[0]);
   return (
     <div className="col-lg-5 col-md-12 order-lg-2">
-      <div className="home-right-box">
+      <div style={{ maxWidth: 454 }} className="home-right-box mx-auto">
         <div className="text-center">
           <h4>Send money abroad</h4>
         </div>

@@ -442,7 +442,7 @@ header.sticky {
 }
 
 .input-info {
-  background: #edf2f7;
+  background-color: #edf2f7;
   border-radius: 6px;
   width: 100%;
   height: 45px;
@@ -453,6 +453,10 @@ header.sticky {
   font-size: 15px;
   line-height: 15px;
   color: #7a828a;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .send-box {
@@ -1033,4 +1037,36 @@ textarea,
 
 label {
   color: #425466;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 12px;
+  border: 1px solid #000;
+  background-color: #000;
+}
+
+.step::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step-active::before {
+  background-color: transparent;
+  border-color: #999;
 }

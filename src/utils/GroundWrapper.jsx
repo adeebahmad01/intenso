@@ -11,7 +11,7 @@ const GroundWrapper = ({ children }) => {
         minHeight: "100vh",
         fontFamily: `'Montserrat', sans-serif`,
       }}
-      className="d-flex py-5 align-items-center ground_wrapper justify-content-center"
+      className="d-flex py-5 flex-column align-items-center ground_wrapper justify-content-center"
     >
       {children}
     </section>

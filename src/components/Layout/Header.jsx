@@ -52,7 +52,7 @@ const Header = () => {
             </ul>
             {/*menu end*/}
             <div className="d-flex align-items-center custom-btn-none">
-              <Link to="/login" className="make-btn">
+              <Link to="/login/country" className="make-btn">
                 Log in
               </Link>
               <Link to="/signup/country" className="make-btn create-btn">
