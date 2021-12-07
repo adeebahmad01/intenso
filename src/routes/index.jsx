@@ -10,6 +10,8 @@ import LoginCountryInfo from "../components/Login/Country";
 import SendMoney from "../components/Dashboard/SendMoney";
 import Success from "../components/Dashboard/Success";
 import LoginSSN from "../components/Login/SSN";
+import BeneficiaryDetails from "../components/Dashboard/BeneficiaryDetails";
+import Summary from "../components/Dashboard/Summary";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +30,8 @@ const AppRoutes = () => {
       </Route>
       <Route path="/dashboard">
         <Route path="send" element={<SendMoney />} />
+        <Route path="details" element={<BeneficiaryDetails />} />
+        <Route path="summary" element={<Summary />} />
         <Route path="success" element={<Success />} />
       </Route>
     </Routes>

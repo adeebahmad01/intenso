@@ -4,13 +4,13 @@ import ReactSelect from "../lib/ReactSelect";
 import alarmIcon from "../assets/images/alerm-icon.svg";
 import errorIcon from "../assets/images/error-icon.svg";
 import feesIcon from "../assets/images/fees-icon.svg";
-const Form = () => {
+const Form = (p) => {
   const [currency, setCurrency] = useState(currencies[0].options[0]);
   const [sendingCurr, setsendingCurr] = useState(currencies[0].options[0]);
   const [receivingCurr, setreceivingCurr] = useState(currencies[0].options[0]);
   return (
     <div className="col-lg-5 col-md-12 order-lg-2">
-      <div style={{ maxWidth: 454 }} className="home-right-box mx-auto">
+      <form {...p} style={{ maxWidth: 454 }} className="home-right-box mx-auto">
         <div className="text-center">
           <h4>Send money abroad</h4>
         </div>
@@ -143,11 +143,9 @@ const Form = () => {
           <h3>4,38€</h3>
         </div>
         <div className="text-center">
-          <button type="button" className="send-btn w-100 mt_30">
-            Send
-          </button>
+          <button className="send-btn w-100 mt_30">Send</button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

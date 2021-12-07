@@ -1070,3 +1070,23 @@ label {
   background-color: transparent;
   border-color: #999;
 }
+
+.filter-icon * {
+  stroke: currentColor;
+}
+
+.table th,
+.table td {
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+  vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fafafb;
+}
+
+.table th,
+.table b {
+  font-weight: 600;
+}
