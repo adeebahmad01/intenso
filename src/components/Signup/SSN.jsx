@@ -2,12 +2,24 @@ import React from "react";
 import { SmallContainer } from "../../utils/FormContainers";
 import { ReactComponent as BankLogo } from "../../assets/images/bank-logo.svg";
 import GroundWrapper from "../../utils/GroundWrapper";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+
 const SSN = () => {
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("../identity");
+  const { state } = useLocation();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (values) => {
+    console.log({
+      ...values,
+      ...state,
+    });
+    navigate("../identity", {
+      state: {
+        ...state,
+        ...values,
+      },
+    });
   };
   return (
     <GroundWrapper>
@@ -19,13 +31,22 @@ const SSN = () => {
             inloggning med Mobilt BankID
           </label>
         </div>
-        <form onSubmit={handleSubmit} className="form-signup text-left">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="form-signup text-left"
+        >
           <div className="form-group receive-box mt_20">
             <label htmlFor="inputCountry">SSN</label>
             <input
               className="input-info"
               type="text"
+              pattern="^[0-9]{6}[0-9]{4}$"
               placeholder="YYYYMMDD****"
+              defaultValue={state.ssn}
+              {...register("ssn", {
+                required: true,
+                pattern: /^[0-9]{6}[0-9]{4}$/,
+              })}
             />
           </div>
           <div className="mt-2 text-muted text-caption">

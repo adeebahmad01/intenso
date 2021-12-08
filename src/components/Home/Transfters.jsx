@@ -32,7 +32,7 @@ const Transfters = () => {
               </div>
               <div className="trust-box d-flex align-items-center justify-content-between">
                 <div>
-                  <h3 className="min-head trust-text">
+                  <h3 className="min-head text-center text-md-left trust-text">
                     Trusted by More than
                     <br /> <span>1 Millions</span> users.
                   </h3>

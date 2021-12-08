@@ -41,8 +41,8 @@ const BeneficiaryDetails = () => {
     <GroundWrapper>
       <div className="container-fluid py-5 mt-5">
         <div className="row align-items-center">
-          <div className="col-lg-8">
-            <LargeContainer style={{ overflowX: "auto" }}>
+          <div className="col-lg-7 py-3">
+            <LargeContainer className="mx-auto" style={{ overflowX: "auto" }}>
               <div style={{ minWidth: 700 }}>
                 <div className="d-flex align-items-center">
                   <h1 style={{ fontSize: 18 }}>Top Selling Products</h1>
@@ -101,8 +101,8 @@ const BeneficiaryDetails = () => {
               </div>
             </LargeContainer>
           </div>
-          <div className="col-lg-4">
-            <SmallContainer>
+          <div className="col-lg-5 py-3">
+            <SmallContainer className="mx-auto">
               <div className="headings text-center mb-4">
                 <h1 className="text-lg pb-2 font-weight-bold">
                   New Beneficiary details

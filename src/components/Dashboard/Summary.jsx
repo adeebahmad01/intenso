@@ -76,7 +76,7 @@ const Summary = () => {
             </SmallContainer>
           </div>
           <div className="col-lg-6">
-            <SmallContainer>
+            <SmallContainer className="mx-auto">
               <form action="/" onSubmit={handleSubmit}>
                 <div className="headings text-center mb-4">
                   <h1 className="text-lg pb-2 font-weight-bold">

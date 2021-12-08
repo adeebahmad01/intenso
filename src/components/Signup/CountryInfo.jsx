@@ -1,16 +1,30 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import currencies from "../../data/currencies";
 import ReactSelect from "../../lib/ReactSelect";
 import { SmallContainer } from "../../utils/FormContainers";
 import GroundWrapper from "../../utils/GroundWrapper";
+import { useForm } from "react-hook-form";
 
 const SignupForm = () => {
   const [country, setCountry] = useState(currencies[0].options[0]);
+  const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("../ssn");
+  const { state } = useLocation();
+  useEffect(() => {
+    if (state && state.countryName) {
+      setCountry(
+        currencies[1].options.find((c) => c.country === state.countryName)
+      );
+    }
+  }, [state]);
+  const onSubmit = (values) => {
+    navigate("../ssn", {
+      state: {
+        countryName: country.country,
+        ...values,
+      },
+    });
   };
   return (
     <GroundWrapper>
@@ -20,7 +34,7 @@ const SignupForm = () => {
           <h2 className="text-small">It’s free and easy</h2>
         </div>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="form-signup container-fluid text-left"
         >
           <div className="form-group country-box mt_25">
@@ -66,7 +80,31 @@ const SignupForm = () => {
               <input
                 className="w-100 h-100 input-info"
                 type="text"
-                placeholder="874 20 24 50"
+                maxLength={10}
+                onKeyDown={(e) =>
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "0",
+                    "Backspace",
+                    "ArrowLeft",
+                    "ArrowRight",
+                    "ArrowUp",
+                    "ArrowDown",
+                    " ",
+                  ].indexOf(e.key) === -1 && e.preventDefault()
+                }
+                placeholder="874 2032450"
+                {...register("phone", {
+                  required: true,
+                })}
               />
             </div>
           </div>
@@ -76,6 +114,9 @@ const SignupForm = () => {
               className="input-info"
               type="text"
               placeholder="nnn@ddd.com"
+              {...register("email", {
+                required: true,
+              })}
             />
           </div>
           <div className="form-group receive-box mt_20 d-flex">
@@ -85,6 +126,7 @@ const SignupForm = () => {
                 className="custom-checkbox mr-0"
                 name="terms"
                 id="terms"
+                required
               />
             </div>
             <label htmlFor="terms" className="w-auto font-weight-normal pl-3">

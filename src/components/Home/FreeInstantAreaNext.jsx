@@ -33,28 +33,22 @@ const FreeInstantAreaNext = () => {
                 exchange major currencies.
               </p>
               <div className="custom-get">
-                <div
-                  data-aos="fade-left"
-                  className="d-flex align-items-center justify-content-between"
-                >
-                  <p className="exchange-rate mt_35">
+                <div data-aos="fade-left" className="row align-items-center">
+                  <p className="col-6 exchange-rate mt_35">
                     <img src={exchangeIcon} alt="exchange-icon" />
                     Exchange rates
                   </p>
-                  <p className="exchange-rate mt_35">
+                  <p className="col-6 exchange-rate mt_35">
                     <img src={exchangeIcon} alt="exchange-icon" />
                     Faster send
                   </p>
                 </div>
-                <div
-                  data-aos="fade-left"
-                  className="d-flex align-items-center justify-content-between"
-                >
-                  <p className="exchange-rate mt_30">
+                <div data-aos="fade-left" className="row align-items-center">
+                  <p className="col-6 exchange-rate mt_30">
                     <img src={exchangeIcon} alt="exchange-icon" />
                     Secure channel
                   </p>
-                  <p className="exchange-rate mt_30">
+                  <p className="col-6 exchange-rate mt_30">
                     <img src={exchangeIcon} alt="exchange-icon" />
                     Money is safe
                   </p>

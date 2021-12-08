@@ -65,7 +65,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6 d-none d-sm-block">
                   <div className="footer-ul company-box mt_60">
                     <h2 className="footer-head">Company</h2>
                     <ul className="mt_25">
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-6">
               <div className="row">
-                <div className="col-sm-6">
+                <div className="col-sm-6 d-none d-sm-block">
                   <div className="footer-ul support-box mt_60">
                     <h2 className="footer-head">Support</h2>
                     <ul className="mt_25">

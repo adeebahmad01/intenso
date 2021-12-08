@@ -1,14 +1,27 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LargeContainer } from "../../utils/FormContainers";
 import GroundWrapper from "../../utils/GroundWrapper";
 import Stepper from "../../utils/Stepper";
+import { useForm } from "react-hook-form";
 
 const Identity = () => {
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("../documents");
+  const { state } = useLocation();
+  const { register, handleSubmit } = useForm();
+  useEffect(() => {
+    console.log(state);
+    if (!state.email) {
+      navigate("../country", { state });
+    }
+  }, [state, navigate]);
+  const onSubmit = (values) => {
+    navigate("../documents", {
+      state: {
+        ...state,
+        ...values,
+      },
+    });
   };
   return (
     <GroundWrapper>
@@ -22,7 +35,7 @@ const Identity = () => {
             Please check if all your details are correct
           </label>
         </div>
-        <form onSubmit={handleSubmit} action="/">
+        <form onSubmit={handleSubmit(onSubmit)} action="/">
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-6">
@@ -32,6 +45,8 @@ const Identity = () => {
                     className="input-info"
                     type="text"
                     placeholder="Sweden"
+                    defaultValue={state.firstName}
+                    {...register("firstName", { required: true })}
                   />
                 </div>
               </div>
@@ -42,6 +57,8 @@ const Identity = () => {
                     className="input-info"
                     type="text"
                     placeholder="Sweden"
+                    defaultValue={state.lastName}
+                    {...register("lastName", { required: true })}
                   />
                 </div>
               </div>
@@ -52,6 +69,8 @@ const Identity = () => {
                     className="input-info"
                     type="text"
                     placeholder="YYYYMMDD****"
+                    defaultValue={state.ssn}
+                    {...register("ssn", { required: true })}
                   />
                 </div>
               </div>
@@ -62,6 +81,8 @@ const Identity = () => {
                     className="input-info"
                     type="text"
                     placeholder="xxxxxxxxxxx"
+                    defaultValue={state.address}
+                    {...register("address", { required: true })}
                   />
                 </div>
               </div>
@@ -72,6 +93,8 @@ const Identity = () => {
                     className="input-info"
                     type="text"
                     placeholder="xxxxxxxxxxx"
+                    defaultValue={state.postalCode}
+                    {...register("postalCode", { required: true })}
                   />
                 </div>
               </div>
@@ -81,7 +104,9 @@ const Identity = () => {
                   <input
                     className="input-info"
                     type="text"
-                    placeholder="xxxxxxxxxxx"
+                    placeholder="City"
+                    defaultValue={state.cityName}
+                    {...register("cityName", { required: true })}
                   />
                 </div>
               </div>

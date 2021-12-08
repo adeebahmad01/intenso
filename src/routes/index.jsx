@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import SignUpSSN from "../components/Signup/SSN";
 import SignupCountryInfo from "../components/Signup/CountryInfo";
@@ -12,8 +12,16 @@ import Success from "../components/Dashboard/Success";
 import LoginSSN from "../components/Login/SSN";
 import BeneficiaryDetails from "../components/Dashboard/BeneficiaryDetails";
 import Summary from "../components/Dashboard/Summary";
+import { useLocation } from "react-router-dom";
 
 const AppRoutes = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: 0,
+    });
+  }, [location.pathname]);
   return (
     <Routes>
       <Route path="/" element={<Home />} />

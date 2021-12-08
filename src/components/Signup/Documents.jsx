@@ -6,15 +6,34 @@ import GroundWrapper from "../../utils/GroundWrapper";
 import Stepper from "../../utils/Stepper";
 import { ReactComponent as Download } from "../../assets/images/download-icon.svg";
 import { ReactComponent as File } from "../../assets/images/file-icon.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useForm } from "react-hook-form";
 
 const Documents = () => {
+  const { state } = useLocation();
+  const { register, handleSubmit } = useForm();
   const [country, setCountry] = useState(currencies[0].options[0]);
   const [citizenship, setCitizenship] = useState(currencies[0].options[0]);
+  const [front, setFront] = useState(null);
+  const [back, setBack] = useState(null);
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/dashboard/send");
+  const onSubmit = async (values) => {
+    try {
+      // await axios.post("/User/SignUp", {
+      //   ...state,
+      // });
+      // await axios.post("/User/UploadDocument", {
+      //   countryName: country.country,
+      //   citizenship: citizenship.country,
+      //   documentType: values.documentType,
+      //   documentFront: front,
+      //   documentBack: back,
+      // });
+      navigate("/dashboard/send");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <GroundWrapper>
@@ -28,7 +47,7 @@ const Documents = () => {
             We only process the document for our internal Compliance
           </h2>
         </div>
-        <form onSubmit={handleSubmit} className="mt-4 px-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-4 px-2">
           <div className="form-group country-box mt_25">
             <label>Country</label>
             <div className="input-group position-relative">
@@ -103,6 +122,7 @@ const Documents = () => {
               <select
                 className="input-info form-select custom-select"
                 defaultValue=""
+                {...register("documentType", { required: true })}
               >
                 <option disabled value="">
                   Select document
@@ -128,7 +148,22 @@ const Documents = () => {
                 Upload <Download className="ml-2" />
               </span>
             </label>
-            <input type="file" name="front-doc" id="front-doc" hidden />
+            <input
+              type="file"
+              required
+              onChange={(e) => {
+                const img = e.target?.files?.[0];
+                const reader = new FileReader();
+                reader.readAsDataURL(img);
+                reader.onload = (e) => {
+                  setFront(e.target.result);
+                };
+              }}
+              accept="image/*"
+              name="front"
+              id="front-doc"
+              hidden
+            />
           </div>
           <div className="form-group country-box mt_25">
             <label
@@ -145,7 +180,22 @@ const Documents = () => {
                 Upload <Download className="ml-2" />
               </span>
             </label>
-            <input type="file" name="back-doc" id="front-doc" hidden />
+            <input
+              type="file"
+              required
+              onChange={(e) => {
+                // convert image to base64
+                const img = e.target?.files?.[0];
+                const reader = new FileReader();
+                reader.readAsDataURL(img);
+                reader.onload = (e) => {
+                  setBack(e.target.result);
+                };
+              }}
+              name="back"
+              id="front"
+              hidden
+            />
           </div>
           <div className="form-group">
             <div className="text-center">
